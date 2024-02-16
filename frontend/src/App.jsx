@@ -1,11 +1,18 @@
 import Wrapper from "./components/Wrapper/Wrapper"
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, useNavigate } from "react-router-dom"
 
 import Form from "./components/Form/Form"
 import Table from "./components/Table/Table"
+import { useEffect } from "react"
 
 
 function App() {
+
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    navigate('/form/login')
+  }, [])
   
   return (
     <>
