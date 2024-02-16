@@ -13,6 +13,7 @@ import unblockRoute from './routes/unblockUser/unblockUser.js'
 import testRouter from './routes/test/test.js'
 
 import checkUser from './middleware/checkUser.js'
+import noCorse from './middleware/noCorse.js'
 
 dotenv.config()
 
@@ -28,6 +29,8 @@ mongoose
     .connect(process.env.MONGO_URI)
     .then(() => console.log('Db connected'))
     .catch(() => console.log('Connection to db is failed'))
+
+server.use(noCorse)
 
 server.use(registerRouter)
 server.use(testRouter)
