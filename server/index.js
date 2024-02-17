@@ -10,7 +10,6 @@ import deleteRouter from './routes/deleteUser/deleteUser.js'
 import blockRouter from './routes/blockUser/blockUser.js'
 import getUsersRouter from './routes/getUsers/getUsers.js'
 import unblockRoute from './routes/unblockUser/unblockUser.js'
-import testRouter from './routes/test/test.js'
 
 import checkUser from './middleware/checkUser.js'
 import noCorse from './middleware/noCorse.js'
@@ -33,7 +32,6 @@ mongoose
 server.use(noCorse)
 
 server.use(registerRouter)
-server.use(testRouter)
 server.use(loginRouter)
 
 server.use(checkUser)
